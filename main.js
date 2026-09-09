@@ -1,6 +1,5 @@
-const word = require('fs').readFileSync(0, 'utf-8').trim();
-let nw = "";
-for (let i = word.length-1; i >= 0 ; i--) {
-    nw+=word[i];
-}
-console.log(`${nw}`);
+const lines = require('fs').readFileSync(0, 'utf-8').trim().split('\n');
+const name = lines[0];
+const age = lines[1];
+// Print the greeting using a template literal.
+console.log(`Hi, ${name}! You are ${age} years old.`);
